@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class rot_string {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.nextLine();
+        int k = sc.nextInt();
+
+        int n = s.length();
+        k = k % n;
+
+        for (int r = 0; r < k; r++) {
+
+            char first = s.charAt(0);
+            s = s.substring(1) + first;
+        }
+
+        System.out.println(s);
+
+        sc.close();
+    }
+}
